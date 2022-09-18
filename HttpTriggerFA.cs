@@ -14,7 +14,7 @@ namespace KGoovaer.Function
     public static class HttpTriggerFA
     {
         [FunctionName("HttpTriggerFA")]
-        [return: ServiceBus("demofabusqueue", ServiceBusEntityType.Queue)]  
+        [return: ServiceBus("demofabusqueue", EntityType.Queue)]  
         public static async Task<IActionResult> Run(
             [HttpTrigger(AuthorizationLevel.Anonymous, "get", "post", Route = null)] HttpRequest req,
             ILogger log)
